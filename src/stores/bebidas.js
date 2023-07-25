@@ -14,6 +14,11 @@ export const useBebidasStore = defineStore('bebidas', () => {
     const recetas = ref([])
     const receta = ref({})
 
+    // onMounted(async () => {
+    //     const {data: {drinks}} = await axios('https://www.apiexample.com/api/json/v1/list.php?=list')
+    //     categorias.value = drinks
+    // })
+
     onMounted(async function() {
         const {data: {drinks}} = await APIService.obtenerCategorias()
         categorias.value = drinks
