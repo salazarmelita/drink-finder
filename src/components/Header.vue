@@ -5,8 +5,12 @@
     import { useNotificacionStore } from '../stores/notificaciones'
 
     const route = useRoute()
+    // no es recomendable usar distruction, eso rompe la reactividad
+    // const { categorias } = useBebidasStore()
     const store  = useBebidasStore()
     const notificaciones  = useNotificacionStore()
+
+
     const paginaInicio = computed(() => route.name === 'inicio')
 
     const handleSubmit = () => {
@@ -59,7 +63,7 @@
 
             <form
                 v-if="paginaInicio"
-                class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
+                class="md:w-1/2 2xl:w-1/3 bg-[#196395] my-32 p-10 rounded-lg shadow space-y-6"
                 @submit.prevent="handleSubmit"
             >
                 <div class="space-y-4">
