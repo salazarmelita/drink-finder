@@ -8,3 +8,4 @@
 - Axios: npm install axios
 - TailwindCCS: npm install -D tailwindcss postcss autoprefixer
 - Headless UI: npm install @headlessui/vue
+- Heroicons: npm install @heroicons/vue
